@@ -1,0 +1,51 @@
+#root {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.slide-in::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background-color: white;
+  transition: width 0.3s ease-in;
+}
+
+.slide-in:hover::after,
+.slide-in:active::after {
+  width: 100%;
+}
+
+.close:active {
+  transform: scale(1.2);
+  color: red;
+}
+
+.profile:active {
+  transform: scale(1.2);
+  color: rgb(17, 164, 231);
+}
+
+.hero-sect {
+  min-height: 80vh;
+  background-image: url(/laundry-bg\ .jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero-content {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
